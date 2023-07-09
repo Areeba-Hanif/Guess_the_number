@@ -1,0 +1,55 @@
+body{
+  background-color: rgb(170, 238, 215);
+}
+.header{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(5, 5, 73);
+  text-align: center;
+}
+p{
+  margin-left: 30px;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+}
+.container{
+  width: 450px;
+  background-color: aqua;
+  padding: 20px;
+  margin: auto;
+  box-shadow: 2;
+  box-shadow: 10px 10px #888888;
+}
+#guessInput{
+  margin-left: 40px;
+  border: 3px solid rgb(16, 65, 16);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+#guessButton{
+  border: 3px solid rgb(16, 65, 16);
+  border-radius: 5px;
+  color: rgb(233, 233, 241);
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: rgb(5, 5, 73);
+
+}
+#guessButton:hover{
+  background-color: beige;
+  color: rgb(5, 5, 73);;
+}
+#result1,#result2{
+  margin-left: 30px;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+  padding: 20px;
+}

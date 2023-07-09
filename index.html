@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Number</title>
+ <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="header">
+  
+  <h1>Guess the Number</h1>
+  </div>
+  <div class="container">
+
+ 
+  <p>Guess the randomly generated number between 1-100<br>and check your guess here !!</p>
+  <input type="number" id="guessInput">
+  <button id="guessButton">Check</button>
+  <div id="result1" class="result1"></div>
+  <div id="result2" class="result2"></div>
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const num = Math.floor(Math.random() * 100) + 1;
+      let chances = 0;
+
+      const guessInput = document.getElementById('guessInput');
+      const guessButton = document.getElementById('guessButton');
+      const resultDiv1 = document.getElementById('result1');
+      const resultDiv2 = document.getElementById('result2');
+do{
+      guessButton.addEventListener('click', function() {
+        const guess = parseInt(guessInput.value);
+
+        if (guess < num) {
+          resultDiv1.textContent = "Your number is smaller than the original number. Please try again.";
+          chances++;
+        } else if (guess > num) {
+          resultDiv1.textContent = "Your number is larger than the original number. Please try again.";
+          chances++;
+        } else {
+            guessButton.disabled = true;
+            const score = 100 - chances;
+            resultDiv1.textContent = "Congratulations! You guessed the correct number: " + num;
+            resultDiv2.textContent = "Your score is: "+ score;
+          
+          
+        }
+    });
+    
+}while(guess!=num)
+      });
+
+    
+  </script>
+</body>
+</html>
